@@ -1,0 +1,153 @@
+/*
+  Component-level styles for repeated elements (cards, inputs, buttons).
+  Tailwind's CDN build only supports @apply inside an inline <style> tag,
+  not in a linked file like this one — so these are written as plain CSS
+  that mirrors the same shadcn-style visual language: soft borders,
+  rounded corners, muted slate palette, subtle focus rings.
+*/
+
+.card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+}
+.card > * + * {
+  margin-top: 1rem;
+}
+
+.card-heading {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #0f172a;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.field-label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #334155;
+  margin-bottom: 0.375rem;
+}
+
+.field-input {
+  width: 100%;
+  border: 1px solid #cbd5e1;
+  border-radius: 0.3rem;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.875rem;
+  color: #0f172a;
+  background: #ffffff;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+.field-input:focus {
+  outline: none;
+  border-color: #64748b;
+  box-shadow: 0 0 0 3px rgba(15, 23, 42, 0.08);
+}
+
+.checkbox-fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.checkbox-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.25rem;
+}
+
+.checkbox-option {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: #334155;
+}
+.checkbox-option input[type="checkbox"] {
+  height: 1rem;
+  width: 1rem;
+  border-radius: 0.25rem;
+  border: 1px solid #cbd5e1;
+  accent-color: #0f172a;
+}
+
+.other-detail {
+  margin-top: 0.5rem;
+}
+
+.field-error-text {
+  display: none;
+  font-size: 0.8rem;
+  color: #dc2626;
+  margin-top: 0.25rem;
+}
+
+/* Applied by JS to a field's wrapping element when validation fails */
+.has-error .field-input {
+  border-color: #f87171;
+  background: #fef2f2;
+}
+.has-error .field-error-text {
+  display: block;
+}
+
+.submit-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #0f172a;
+  color: #ffffff;
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: 0.625rem 1.25rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+.submit-button:hover {
+  background: #1e293b;
+}
+.submit-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.nav-button-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  color: #334155;
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: 0.625rem 1.25rem;
+  border-radius: 0.5rem;
+  border: 1px solid #cbd5e1;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+.nav-button-secondary:hover {
+  background: #f1f5f9;
+}
+
+.status-message {
+  margin-top: 0.75rem;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+}
+.status-message.status-success {
+  background: #f0fdf4;
+  color: #166534;
+}
+.status-message.status-error {
+  background: #fef2f2;
+  color: #dc2626;
+}

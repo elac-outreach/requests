@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tabling &amp; Campus Tour Request Form</title>
+
+<!-- Tailwind via CDN: utility classes only, no build step required -->
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="css/styles.css">
+</head>
+  <body class="min-h-screen bg-slate-50 text-slate-900">
+  <div class="mx-auto max-w-2xl px-4 py-10">
+
+    <header class="mb-8">
+      <h1 class="text-2xl font-semibold tracking-tight">Tabling &amp; Campus Tour Request Form</h1>
+      <p class="mt-1 text-sm text-slate-500">Please complete all required fields. You'll receive a confirmation email once your request is submitted.</p>
+    </header>
+
+    <!--
+      This form is assembled at load time from the files in /sections.
+      Each placeholder div below gets replaced with the matching section's
+      markup by js/load-sections.js — see that file for how the pieces get
+      stitched together.
+    -->
+    <form id="request-form" novalidate class="space-y-6">
+      <div id="section-requester"></div>
+      <div id="section-tabling"></div>
+      <div id="section-tour"></div>
+      <div id="section-notes"></div>
+
+      <!--
+        This nav bar is NOT part of any single step — it's always on screen.
+        Which of Back/Next is visible, and what the step count reads, is
+        controlled by js/step-navigation.js.
+      -->
+      <div class="flex items-center justify-between pt-2">
+        <button type="button" id="back-button" class="nav-button-secondary hidden">Back</button>
+        <p id="step-indicator" class="text-sm text-slate-500"></p>
+        <button type="button" id="next-button" class="submit-button">Next</button>
+      </div>
+    </form>
+  </div>
+
+  <script type="module" src="js/main.js"></script>
+  </body>
+</html>

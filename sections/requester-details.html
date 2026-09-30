@@ -1,0 +1,43 @@
+<section id="step-requester" class="card">
+  <h2 class="card-heading">Requester Details</h2>
+
+  <div>
+    <label class="field-label">Name *</label>
+    <div class="grid gap-4 sm:grid-cols-2">
+      <div><input id="first-name" type="text" class="field-input" placeholder="First"></div>
+      <div><input id="last-name" type="text" class="field-input" placeholder="Last"></div>
+    </div>
+  </div>
+
+  <div class="grid gap-4 sm:grid-cols-2">
+    <div>
+      <label for="title" class="field-label">Title *</label>
+      <input id="title" type="text" class="field-input">
+    </div>
+    <div>
+      <label for="organization" class="field-label">Organization *</label>
+      <input id="organization" type="text" class="field-input">
+    </div>
+  </div>
+
+  <div class="grid gap-4 sm:grid-cols-2">
+    <div>
+      <label for="email" class="field-label">Email *</label>
+      <input id="email" type="email" class="field-input">
+      <p class="field-error-text">Enter a valid email address.</p>
+    </div>
+    <div>
+      <label for="phone" class="field-label">Phone *</label>
+      <input id="phone" type="tel" class="field-input">
+    </div>
+  </div>
+
+  <div>
+    <label for="request-type" class="field-label">Type of Request *</label>
+    <select id="request-type" class="field-input">
+      <option value="">Select one...</option>
+      <option value="Tabling">Tabling</option>
+      <option value="Campus Tour">Campus Tour</option>
+    </select>
+  </div>
+</section>

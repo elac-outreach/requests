@@ -1,0 +1,112 @@
+<section id="step-tabling-details" class="card hidden">
+  <h2 class="card-heading">Tabling Event Details</h2>
+
+  <div>
+    <label for="event-name" class="field-label">Event Name *</label>
+    <input id="event-name" type="text" class="field-input">
+  </div>
+
+  <fieldset class="checkbox-fieldset">
+    <legend class="field-label">Event Type * (select all that apply)</legend>
+    <div class="checkbox-grid">
+      <label class="checkbox-option"><input type="checkbox" value="College Fair" class="js-event-type"> College Fair</label>
+      <label class="checkbox-option"><input type="checkbox" value="Resource Fair" class="js-event-type"> Resource Fair</label>
+      <label class="checkbox-option"><input type="checkbox" value="Community Event" class="js-event-type"> Community Event</label>
+      <label class="checkbox-option"><input id="event-type-other-toggle" type="checkbox" value="Other" class="js-event-type"> Other</label>
+    </div>
+    <input id="event-type-other-detail" type="text" class="field-input other-detail hidden" placeholder="Please specify...">
+    <p id="event-type-error" class="field-error-text">Select at least one event type.</p>
+  </fieldset>
+
+  <div>
+    <label for="event-description" class="field-label">Event Description</label>
+    <textarea id="event-description" class="field-input" rows="3"></textarea>
+  </div>
+</section>
+
+<section id="step-tabling-logistics" class="card hidden">
+  <h2 class="card-heading">Tabling Event Logistics</h2>
+
+  <div>
+    <label for="event-date" class="field-label">Event Date *</label>
+    <input id="event-date" type="date" class="field-input">
+    <p class="field-error-text">Must be requested at least 2 weeks in advance.</p>
+  </div>
+
+  <div class="grid gap-4 sm:grid-cols-3">
+    <div>
+      <label for="setup-time" class="field-label">Setup Time</label>
+      <select id="setup-time" class="field-input"></select>
+    </div>
+    <div>
+      <label for="start-time" class="field-label">Start Time *</label>
+      <select id="start-time" class="field-input"></select>
+      <p class="field-error-text">Start time is required.</p>
+    </div>
+    <div>
+      <label for="end-time" class="field-label">End Time *</label>
+      <select id="end-time" class="field-input"></select>
+      <p class="field-error-text">Must be after start time.</p>
+    </div>
+  </div>
+
+  <div>
+    <label class="field-label">Address *</label>
+    <div class="space-y-3">
+      <div><input id="address-line-1" type="text" class="field-input" placeholder="Address Line 1"></div>
+      <div><input id="address-line-2" type="text" class="field-input" placeholder="Address Line 2"></div>
+      <div class="grid gap-4 sm:grid-cols-3">
+        <div><input id="city" type="text" class="field-input" placeholder="City"></div>
+        <div><input id="state" type="text" class="field-input bg-slate-100 text-slate-500" value="CA" readonly></div>
+        <div><input id="zip" type="text" class="field-input" placeholder="Zip Code"></div>
+      </div>
+    </div>
+  </div>
+
+  <fieldset class="checkbox-fieldset">
+    <legend class="field-label">Target Audience * (select all that apply)</legend>
+    <div class="checkbox-grid">
+      <label class="checkbox-option"><input type="checkbox" value="Elementary School" class="js-tabling-audience"> Elementary School</label>
+      <label class="checkbox-option"><input type="checkbox" value="Middle School" class="js-tabling-audience"> Middle School</label>
+      <label class="checkbox-option"><input type="checkbox" value="High School" class="js-tabling-audience"> High School</label>
+      <label class="checkbox-option"><input type="checkbox" value="Adult Learners" class="js-tabling-audience"> Adult Learners</label>
+      <label class="checkbox-option"><input type="checkbox" value="Prospective Students" class="js-tabling-audience"> Prospective Students</label>
+      <label class="checkbox-option"><input id="tabling-audience-other-toggle" type="checkbox" value="Other" class="js-tabling-audience"> Other</label>
+    </div>
+    <input id="tabling-audience-other-detail" type="text" class="field-input other-detail hidden" placeholder="Please specify...">
+    <p id="tabling-audience-error" class="field-error-text">Select at least one target audience.</p>
+  </fieldset>
+</section>
+
+<section id="step-tabling-additional" class="card hidden">
+  <h2 class="card-heading">Tabling Event Additional Details</h2>
+
+  <fieldset class="checkbox-fieldset">
+    <legend class="field-label">Which will be provided?</legend>
+    <div class="checkbox-grid">
+      <label class="checkbox-option"><input type="checkbox" value="Canopy" class="js-items-provided"> Canopy</label>
+      <label class="checkbox-option"><input type="checkbox" value="Table" class="js-items-provided"> Table</label>
+      <label class="checkbox-option"><input type="checkbox" value="Chairs" class="js-items-provided"> Chairs</label>
+      <label class="checkbox-option"><input type="checkbox" value="Wi-Fi Access" class="js-items-provided"> Wi-Fi Access</label>
+      <label class="checkbox-option"><input type="checkbox" value="Parking" class="js-items-provided"> Parking</label>
+    </div>
+  </fieldset>
+
+  <div>
+    <label for="indoor-outdoor" class="field-label">The event will be... *</label>
+    <select id="indoor-outdoor" class="field-input">
+      <option value="">Select one...</option>
+      <option>Indoors</option>
+      <option>Outdoors</option>
+    </select>
+  </div>
+
+  <div>
+    <label for="flyer-link" class="field-label">Event Flyer Link</label>
+    <input id="flyer-link" type="url" class="field-input" placeholder="https://...">
+  </div>
+  <div>
+    <label for="rsvp-link" class="field-label">RSVP Link</label>
+    <input id="rsvp-link" type="url" class="field-input" placeholder="https://...">
+  </div>
+</section>

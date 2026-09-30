@@ -1,0 +1,110 @@
+<section id="step-tour-details" class="card hidden">
+  <h2 class="card-heading">Campus Tour Details</h2>
+
+  <fieldset class="checkbox-fieldset">
+    <legend class="field-label">Target Audience * (select all that apply)</legend>
+    <div class="checkbox-grid">
+      <label class="checkbox-option"><input type="checkbox" value="Elementary School" class="js-tour-audience js-k12-audience"> Elementary School</label>
+      <label class="checkbox-option"><input type="checkbox" value="Middle School" class="js-tour-audience js-k12-audience"> Middle School</label>
+      <label class="checkbox-option"><input type="checkbox" value="High School" class="js-tour-audience js-k12-audience"> High School</label>
+      <label class="checkbox-option"><input type="checkbox" value="Adult Learners" class="js-tour-audience"> Adult Learners</label>
+      <label class="checkbox-option"><input type="checkbox" value="Community Based Organization" class="js-tour-audience"> Community Based Organization</label>
+      <label class="checkbox-option"><input id="tour-audience-other-toggle" type="checkbox" value="Other" class="js-tour-audience"> Other</label>
+    </div>
+    <input id="tour-audience-other-detail" type="text" class="field-input other-detail hidden" placeholder="Please specify...">
+    <p id="tour-audience-error" class="field-error-text">Select at least one target audience.</p>
+  </fieldset>
+
+  <div class="grid gap-4 sm:grid-cols-2">
+    <div>
+      <label for="num-participants" class="field-label">Number of Participants *</label>
+      <select id="num-participants" class="field-input"></select>
+    </div>
+    <div id="chaperone-field-wrap" class="hidden">
+      <label for="num-chaperones" class="field-label">Number of Chaperones *</label>
+      <select id="num-chaperones" class="field-input"></select>
+      <p class="field-error-text">Required for K-12 groups.</p>
+    </div>
+  </div>
+</section>
+
+<section id="step-tour-datetime" class="card hidden">
+  <h2 class="card-heading">Tour Date and Time (offer up to 3 options)</h2>
+  <p class="text-sm text-slate-500 -mt-2">Option 1 is required. Complete each option to reveal the next. Requests must be made at least 2 weeks in advance.</p>
+
+  <div id="tour-option-1">
+    <p class="font-medium text-sm mb-2">Option 1 *</p>
+    <div class="grid gap-4 sm:grid-cols-3">
+      <div>
+        <label for="tour-date-1" class="field-label">Date</label>
+        <input id="tour-date-1" type="date" class="field-input">
+        <p class="field-error-text">At least 2 weeks in advance.</p>
+      </div>
+      <div>
+        <label for="tour-start-1" class="field-label">Start</label>
+        <select id="tour-start-1" class="field-input"></select>
+        <p class="field-error-text">Start time is required.</p>
+      </div>
+      <div>
+        <label for="tour-end-1" class="field-label">End</label>
+        <select id="tour-end-1" class="field-input"></select>
+        <p class="field-error-text">Must be after start time.</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="tour-option-2" class="hidden">
+    <p class="font-medium text-sm mb-2">Option 2</p>
+    <div class="grid gap-4 sm:grid-cols-3">
+      <div>
+        <label for="tour-date-2" class="field-label">Date</label>
+        <input id="tour-date-2" type="date" class="field-input">
+        <p class="field-error-text">At least 2 weeks in advance.</p>
+      </div>
+      <div>
+        <label for="tour-start-2" class="field-label">Start</label>
+        <select id="tour-start-2" class="field-input"></select>
+      </div>
+      <div>
+        <label for="tour-end-2" class="field-label">End</label>
+        <select id="tour-end-2" class="field-input"></select>
+        <p class="field-error-text">Must be after start time.</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="tour-option-3" class="hidden">
+    <p class="font-medium text-sm mb-2">Option 3</p>
+    <div class="grid gap-4 sm:grid-cols-3">
+      <div>
+        <label for="tour-date-3" class="field-label">Date</label>
+        <input id="tour-date-3" type="date" class="field-input">
+        <p class="field-error-text">At least 2 weeks in advance.</p>
+      </div>
+      <div>
+        <label for="tour-start-3" class="field-label">Start</label>
+        <select id="tour-start-3" class="field-input"></select>
+      </div>
+      <div>
+        <label for="tour-end-3" class="field-label">End</label>
+        <select id="tour-end-3" class="field-input"></select>
+        <p class="field-error-text">Must be after start time.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="step-tour-departments" class="card hidden">
+  <h2 class="card-heading">Departments to Visit</h2>
+  <fieldset class="checkbox-fieldset">
+    <div class="checkbox-grid">
+      <label class="checkbox-option"><input type="checkbox" value="Dream Resource Center" class="js-department"> Dream Resource Center</label>
+      <label class="checkbox-option"><input type="checkbox" value="Disability Support Program &amp; Services (DSP&amp;S)" class="js-department"> DSP&amp;S</label>
+      <label class="checkbox-option"><input type="checkbox" value="Extended Opportunity Program &amp; Services (EOP&amp;S)" class="js-department"> EOP&amp;S</label>
+      <label class="checkbox-option"><input type="checkbox" value="Vincent Price Museum" class="js-department"> Vincent Price Museum</label>
+      <label class="checkbox-option"><input type="checkbox" value="Financial Aid" class="js-department"> Financial Aid</label>
+      <label class="checkbox-option"><input id="department-other-toggle" type="checkbox" value="Other" class="js-department"> Other</label>
+    </div>
+    <input id="department-other-detail" type="text" class="field-input other-detail hidden" placeholder="Please specify...">
+  </fieldset>
+</section>
